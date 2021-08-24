@@ -1,0 +1,48 @@
+img{
+    max-width: 100%;
+}
+.header{
+    background-color: rgb(16,20,70);
+}
+.header-logo img {
+    width: 80px;
+    padding: 5px 0px;
+}
+.header-menu ul {
+    margin-bottom: 0px;
+}
+.header-menu ul li{
+    display: inline-block;
+}
+.header-menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 18px;
+    line-height: 62px;
+}
+.banner{
+    background-image: url(https://i.ibb.co/BTHXh4g/intro-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 0px;
+}
+.team{
+    background-color: rgb(186,193,246);
+}
+.about{
+    background-color: rgb(194,212,234);
+}
+.about-left-img{
+    display: inline-block;
+}
+.about-left-content{
+    display: inline-block;
+    margin-left: 80px;
+}
+.footer{
+    background-color: rgb(0,98,211);
+    
+}
