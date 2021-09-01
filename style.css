@@ -1,48 +1,275 @@
-img{
-    max-width: 100%;
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
 }
-.header{
-    background-color: rgb(16,20,70);
+.mid-content{
+    width: 1200px;
+    margin: auto;
 }
+body,h1,h2,h3,h4,h5,h6,span,a,p{
+    font-family: 'Open Sans', sans-serif;
+    text-transform: capitalize;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.header-section{
+    background-color: black;
+    
+}
+
 .header-logo img {
-    width: 80px;
-    padding: 5px 0px;
+	width: 260px;
 }
-.header-menu ul {
-    margin-bottom: 0px;
+.navbar{}
+.navbar ul {
+	text-align: right;
+    
 }
-.header-menu ul li{
-    display: inline-block;
+.navbar ul li {
+	display: inline-block;
 }
-.header-menu ul li a {
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0px 10px;
-    font-size: 18px;
-    line-height: 62px;
+.navbar ul li a {
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px 20px;
+	font-weight: 600;
+    transition: .5s;
+    border-bottom: none;
 }
+
+.navbar ul li:first-child a{
+    color: rgb(196,147,82);
+}
+.navbar ul li a span {
+	font-size: 12px;
+}
+.navbar ul li a:hover{
+    color: rgb(196,147,82); 
+}
+
+/* main css */
 .banner{
-    background-image: url(https://i.ibb.co/BTHXh4g/intro-bg.jpg);
+    background-image: url(./img/banner.jpg);
+    padding: 120px 0px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 200px 0px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
 }
-.team{
-    background-color: rgb(186,193,246);
+.banner::after{
+    content: "";
+    background-color: rgba(0,0,0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
 }
-.about{
-    background-color: rgb(194,212,234);
+.banner-inner h1 {
+	font-size: 70px;
+	font-weight: 800;
 }
-.about-left-img{
-    display: inline-block;
+.banner-inner h2 {
+	font-size: 30px;
+	font-weight: 600;
+    position: relative;
 }
-.about-left-content{
-    display: inline-block;
-    margin-left: 80px;
+.banner-inner h2::before{
+    content: "";
+    width: 100px;
+    /* height: 10px; */
+    color: #fff;
 }
-.footer{
-    background-color: rgb(0,98,211);
+.banner-btn {
+	background: rgb(198,148,83);
+	border: none;
+	text-transform: capitalize;
+	display: inline-block;
+	padding: 15px 30px;
+	border-radius: 30px;
+	color: white;
+	margin-top: 20px;
+    transition: .5s;
+}
+.banner-btn:hover{
+    background-color: white;
+    color: rgb(198,148,83);
+}
+/* service section css  */
+.service-section {
+	padding: 80px 0px;
+    background-color: rgb(248,248,248);
+}
+.service-image img {
+	margin: 20px 0px;
+	border-radius: 50%;
+    transform: scaleX(360deg);
+    transition: .5s;
+}
+
+.services{}
+.service-item {
+	width: 24%;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	transition: .5s;
+	box-sizing: border-box;
+	margin-right: 16px;
+	height: 360px;
+}
+.service-item:nth-child(4) {
+    margin-right: 0px;
+}
+.service-item:hover{
+    background-color: rgb(188,187,185);
+}
+.service-item h2 {
+	font-size: 20px;
+	font-weight: 600;
+}
+.service-item p {
+	color: grey;
+	margin-bottom: 28px;
+}
+.service-btn {
+	background: rgb(198,148,83);
+	border: none;
+	text-transform: capitalize;
+	display: inline-block;
+	padding: 15px 30px;
+	border-radius: 10px;
+	color: white;
+	transition: .5s;
+}
+.service-btn:hover{
+    background-color: white;
+    color: rgb(198,148,83);
+}
+.service-item:hover .service-image img{
+    transform: rotateY(360deg);
+    transition: .7s;
+}
+.service-item:hover .service-btn{
+    background-color: white;
+    color: rgb(198,148,83);
     
+}
+.service-item:hover .service-btn:hover {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	margin-top: 10px;
+}
+/* ABOUT CCSS  */
+.about-section{
+    padding: 80px 0px;
+    background-color: rgb(248,248,248);
+}
+.about{}
+.about-left-content{
+    width: 40%;
+}
+.about-right-content {
+	width: 53%;
+}
+.about-right-content h1{}
+.about-right-content span{
+    color: rgb(196,147,82);
+}
+.about-right-content p{
+    color: grey;
+    font-size: 15px;
+}
+.about-btn {
+	background: rgb(0, 0, 0);
+	border: none;
+	text-transform: capitalize;
+	display: inline-block;
+	padding: 15px 20px;
+	color: rgb(255, 255, 255);
+	margin: 15px 0px;
+	transition: .5s;
+}
+.about-btn:hover{
+    color: white;
+    background-color: rgb(198,148,83);
+}
+.address-bar{
+    color: grey;
+    margin-top: 30px;
+}
+/* form section  */
+.form-section{
+    background-image: url(./img/form.jpg);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
+}
+.form h1 {
+	font-size: 45px;
+}
+.form p{
+    width: 600px;
+    font-size: 18px;
+    color: grey;
+    
+}
+.input-form {
+	display: inline-block;
+	width: 500px;
+	margin-bottom: 20px;
+	padding: 13px;
+	font-size: 20px;
+	border: 1px solid #ddd;
+    color: grey;
+    
+}
+.input-form:focus{
+    border: 2px solid black;
+    outline: none;
+}
+
+.form-btn {
+	background-color: rgb(196,147,82);
+	color: white;
+	border: none;
+	display: inline-block;
+	text-transform: capitalize;
+	padding: 15px 25px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+/* ooter css */
+.footer-section{
+    background-color:rgb(109,109,109);
+    padding: 15px 0px;
+    color: rgb(221,221,221);
+
+}
+.footer{}
+.copyright p {
+	font-size: 17px;
+	margin-top: 23px;
+}
+.footer-icon{}
+.footer-icon ul{}
+.footer-icon ul li{
+    display: inline-block;
+}
+.footer-icon ul li span {
+	color: rgb(221,221,221);
+	font-size: 25px;
+	margin-left: 30px;
 }
